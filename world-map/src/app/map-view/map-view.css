@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  gap: 2rem;
+}
+.map-column, .info-column {
+  flex: 1;
+}
