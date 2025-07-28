@@ -1,1 +1,21 @@
-<p>map-view works!</p>
+<div class="container">
+  <div class="map-column">
+    <app-svg-map (countrySelected)="onCountrySelected($event)"></app-svg-map>
+  </div>
+  <div class="info-column">
+    <div *ngIf="country">
+      <h2>{{ country.name }}</h2>
+      <ul>
+        <li><strong>Capital:</strong> {{ country.capital }}</li>
+        <li><strong>Region:</strong> {{ country.region }}</li>
+        <li><strong>Income Level:</strong> {{ country.incomeLevel }}</li>
+        <li><strong>Longitude:</strong> {{ country.longitude }}</li>
+        <li><strong>Latitude:</strong> {{ country.latitude }}</li>
+        <li><strong>ISO2:</strong> {{ country.iso2Code }}</li>
+      </ul>
+    </div>
+    <div *ngIf="!country">
+      <p>Select a country on the map.</p>
+    </div>
+  </div>
+</div>
